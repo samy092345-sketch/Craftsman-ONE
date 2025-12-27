@@ -1,0 +1,497 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Derechos Reservados - NEOMC11</title>
+    <meta name="description" content="Información legal y copyright de los proyectos de NEOMC11.">
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;500;600;700&display=swap">
+    <style>
+        :root {
+            --primary-blue: #1E88E5;
+            --primary-yellow: #FFC107;
+            --dark-bg: #000000;
+            --dark-surface: #121212;
+            --dark-card: #1E1E1E;
+            --text-primary: #FFFFFF;
+            --text-secondary: #B0B0B0;
+            --border-color: rgba(255, 193, 7, 0.2);
+            --shadow-sm: 0 2px 8px rgba(0, 0, 0, 0.4);
+            --shadow-md: 0 4px 16px rgba(0, 0, 0, 0.5);
+            --shadow-lg: 0 8px 32px rgba(0, 0, 0, 0.6);
+            --blur-bg: rgba(18, 18, 18, 0.85);
+            --blur-card: rgba(30, 30, 30, 0.7);
+        }
+
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            font-family: 'Roboto', -apple-system, BlinkMacSystemFont, 'Segoe UI', sans-serif;
+            background: var(--dark-bg);
+            color: var(--text-primary);
+            min-height: 100vh;
+            line-height: 1.6;
+        }
+
+        /* Header Premium */
+        .playstore-header {
+            position: fixed;
+            top: 0;
+            left: 0;
+            right: 0;
+            z-index: 1000;
+            background: var(--blur-bg);
+            backdrop-filter: blur(20px) saturate(180%);
+            -webkit-backdrop-filter: blur(20px) saturate(180%);
+            border-bottom: 1px solid rgba(255, 193, 7, 0.15);
+            box-shadow: 0 4px 30px rgba(0, 0, 0, 0.8);
+            padding: 16px 20px;
+        }
+
+        .header-content {
+            max-width: 1400px;
+            margin: 0 auto;
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+        }
+
+        .store-title {
+            font-size: 26px;
+            font-weight: 700;
+            background: linear-gradient(135deg, var(--primary-blue) 0%, var(--primary-yellow) 100%);
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+            background-clip: text;
+            text-shadow: 0 0 20px rgba(255, 193, 7, 0.4);
+        }
+
+        .back-link {
+            color: var(--text-secondary);
+            text-decoration: none;
+            font-size: 16px;
+            display: flex;
+            align-items: center;
+            gap: 8px;
+            padding: 10px 16px;
+            border-radius: 24px;
+            background: rgba(30, 136, 229, 0.1);
+            transition: all 0.3s ease;
+        }
+
+        .back-link:hover {
+            color: var(--primary-yellow);
+            background: rgba(30, 136, 229, 0.3);
+        }
+
+        /* Main Content */
+        .main-content {
+            max-width: 1300px;
+            margin: 0 auto;
+            padding: 140px 20px 100px;
+        }
+
+        .page-title {
+            font-size: 42px;
+            font-weight: 700;
+            text-align: center;
+            margin-bottom: 16px;
+            background: linear-gradient(135deg, var(--primary-blue), var(--primary-yellow));
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+            background-clip: text;
+            text-shadow: 0 0 40px rgba(255, 193, 7, 0.3);
+        }
+
+        .page-subtitle {
+            text-align: center;
+            font-size: 20px;
+            color: var(--text-secondary);
+            margin-bottom: 60px;
+        }
+
+        /* Botón Leer en Voz Alta - Súper Bacano */
+        .read-aloud-button {
+            display: block;
+            margin: 40px auto 60px;
+            padding: 16px 40px;
+            background: linear-gradient(135deg, var(--primary-blue), var(--primary-yellow));
+            color: #000;
+            font-size: 18px;
+            font-weight: 700;
+            border: none;
+            border-radius: 50px;
+            cursor: pointer;
+            box-shadow: 0 8px 32px rgba(30, 136, 229, 0.5);
+            transition: all 0.4s ease;
+            display: flex;
+            align-items: center;
+            gap: 12px;
+        }
+
+        .read-aloud-button:hover {
+            transform: translateY(-4px) scale(1.05);
+            box-shadow: 0 12px 40px rgba(255, 193, 7, 0.6);
+        }
+
+        .read-aloud-button:active {
+            transform: translateY(0);
+        }
+
+        /* Copyright Section */
+        .copyright-section {
+            background: var(--blur-card);
+            backdrop-filter: blur(15px);
+            border: 1px solid var(--border-color);
+            border-radius: 28px;
+            padding: 48px;
+            margin-bottom: 60px;
+            box-shadow: var(--shadow-lg);
+            text-align: center;
+        }
+
+        .copyright-title {
+            font-size: 32px;
+            font-weight: 700;
+            margin-bottom: 28px;
+            color: var(--primary-yellow);
+        }
+
+        .copyright-text {
+            font-size: 17px;
+            color: var(--text-secondary);
+            max-width: 900px;
+            margin: 0 auto 28px;
+        }
+
+        .creator-name {
+            font-size: 24px;
+            font-weight: 700;
+            color: var(--primary-blue);
+            margin: 24px 0;
+        }
+
+        /* Contact Section */
+        .contact-section {
+            background: var(--blur-card);
+            backdrop-filter: blur(15px);
+            border: 1px solid var(--border-color);
+            border-radius: 28px;
+            padding: 40px;
+            margin-bottom: 60px;
+            text-align: center;
+            box-shadow: var(--shadow-lg);
+        }
+
+        .contact-title {
+            font-size: 28px;
+            font-weight: 700;
+            margin-bottom: 24px;
+        }
+
+        .social-links {
+            display: flex;
+            justify-content: center;
+            gap: 32px;
+            flex-wrap: wrap;
+            margin-top: 32px;
+        }
+
+        .social-link {
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            gap: 16px;
+            text-decoration: none;
+            color: var(--text-primary);
+            padding: 24px;
+            border-radius: 24px;
+            transition: all 0.4s ease;
+            min-width: 160px;
+            background: rgba(30, 30, 30, 0.4);
+        }
+
+        .social-link:hover {
+            background: rgba(30, 136, 229, 0.3);
+            transform: translateY(-12px);
+            box-shadow: 0 12px 40px rgba(30, 136, 229, 0.4);
+        }
+
+        .social-icon {
+            width: 70px;
+            height: 70px;
+        }
+
+        /* Projects Section */
+        .projects-section {
+            margin-bottom: 80px;
+        }
+
+        .projects-title {
+            font-size: 36px;
+            font-weight: 700;
+            text-align: center;
+            margin-bottom: 50px;
+            background: linear-gradient(135deg, var(--primary-blue), var(--primary-yellow));
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+        }
+
+        .projects-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(320px, 1fr));
+            gap: 32px;
+        }
+
+        .project-card {
+            background: var(--blur-card);
+            backdrop-filter: blur(15px);
+            border: 1px solid var(--border-color);
+            border-radius: 28px;
+            overflow: hidden;
+            box-shadow: var(--shadow-lg);
+            transition: all 0.4s ease;
+        }
+
+        .project-card:hover {
+            transform: translateY(-16px);
+            box-shadow: 0 20px 50px rgba(30, 136, 229, 0.5);
+            border-color: var(--primary-blue);
+        }
+
+        .project-image {
+            width: 100%;
+            height: 220px;
+            object-fit: cover;
+            background: var(--dark-surface);
+        }
+
+        .project-content {
+            padding: 32px;
+            text-align: center;
+        }
+
+        .project-name {
+            font-size: 24px;
+            font-weight: 700;
+            margin-bottom: 16px;
+            color: var(--text-primary);
+        }
+
+        .project-desc {
+            font-size: 16px;
+            color: var(--text-secondary);
+            margin-bottom: 24px;
+            line-height: 1.5;
+        }
+
+        .project-link {
+            display: inline-block;
+            background: linear-gradient(135deg, var(--primary-blue), var(--primary-yellow));
+            color: #000;
+            padding: 14px 32px;
+            border-radius: 50px;
+            text-decoration: none;
+            font-weight: 700;
+            font-size: 16px;
+            transition: all 0.3s ease;
+            box-shadow: 0 6px 20px rgba(255, 193, 7, 0.4);
+        }
+
+        .project-link:hover {
+            transform: translateY(-4px);
+            box-shadow: 0 10px 30px rgba(255, 193, 7, 0.6);
+        }
+
+        /* Footer */
+        footer {
+            text-align: center;
+            padding: 50px 20px;
+            color: var(--text-secondary);
+            font-size: 15px;
+            border-top: 1px solid rgba(255, 193, 7, 0.1);
+            background: var(--blur-bg);
+        }
+
+        /* Responsive */
+        @media (max-width: 768px) {
+            .page-title { font-size: 36px; }
+            .projects-grid { grid-template-columns: 1fr; }
+            .social-links { gap: 20px; }
+            .read-aloud-button { font-size: 16px; padding: 14px 32px; }
+        }
+    </style>
+</head>
+<body>
+
+    <!-- Header -->
+    <header class="playstore-header">
+        <div class="header-content">
+            <h1 class="store-title">NEOMC11 PORTFOLIO</h1>
+            <a href="Index.html" class="back-link">
+                <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                    <path d="M19 12H5m7-7-7 7 7 7"/>
+                </svg>
+                Volver
+            </a>
+        </div>
+    </header>
+
+    <!-- Main Content -->
+    <div class="main-content">
+
+        <h1 class="page-title">Derechos Reservados & Copyright</h1>
+        <p class="page-subtitle">Todo el trabajo creativo y técnico es propiedad exclusiva de NEOMC11</p>
+
+        <!-- Botón Leer en Voz Alta (Súper Bacano) -->
+        <button class="read-aloud-button" id="readButton">
+            <svg width="32" height="32" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                <path d="M11 5L6 9H2v6h4l5 4V5zM15.54 8.46a5 5 0 0 1 0 7.07"></path>
+                <path d="M19.07 4.93a10 10 0 0 1 0 14.14"></path>
+            </svg>
+            ¡Leer toda la página en voz alta!
+        </button>
+
+        <!-- Copyright Section -->
+        <section class="copyright-section">
+            <h2 class="copyright-title">© 2025 NEOMC11 - Todos los derechos reservados</h2>
+            <p class="copyright-text">
+                Todo el contenido, diseños, código fuente, gráficos, marcas, interfaces y materiales presentes en mis proyectos 
+                son propiedad intelectual exclusiva de <strong>NEOMC11</strong>. Quedan reservados todos los derechos de autor 
+                a nivel mundial.
+            </p>
+            <p class="copyright-text">
+                Prohibida la copia, distribución, modificación, reproducción o cualquier uso comercial sin autorización escrita expresa.
+            </p>
+            <p class="copyright-text">
+                Estos proyectos son independientes y no están afiliados oficialmente con ninguna empresa o marca externa.
+            </p>
+            <div class="creator-name">Creado con pasión por NEOMC11</div>
+        </section>
+
+        <!-- Contact Section -->
+        <section class="contact-section">
+            <h2 class="contact-title">¿Quieres un proyecto personalizado?</h2>
+            <p class="contact-text" style="font-size: 18px; max-width: 800px; margin: 0 auto 40px;">
+                Si te gusta mi estilo y quieres una tienda, generador, portfolio o cualquier web moderna, ¡contáctame!
+            </p>
+            <div class="social-links">
+                <a href="https://discord.com/users/neomc11" target="_blank" class="social-link">
+                    <svg class="social-icon" viewBox="0 0 24 24" fill="#5865F2">
+                        <path d="M20.317 4.492c-1.53-.69-3.17-1.2-4.885-1.49a.075.075 0 0 0-.079.036c-.21.369-.444.85-.608 1.23a18.566 18.566 0 0 0-5.487 0 12.36 12.36 0 0 0-.617-1.23A.077.077 0 0 0 8.562 3c-1.714.29-3.354.8-4.885 1.491a.07.07 0 0 0-.032.027C.533 9.093-.32 13.555.099 17.961a.08.08 0 0 0 .031.055 20.03 20.03 0 0 0 5.993 2.98.078.078 0 0 0 .084-.026 13.83 13.83 0 0 0 1.226-1.963.074.074 0 0 0-.041-.104 13.201 13.201 0 0 1-1.872-.878.075.075 0 0 1-.008-.125c.126-.093.252-.19.372-.287a.075.075 0 0 1 .078-.01c3.927 1.764 8.18 1.764 12.061 0a.075.075 0 0 1 .079.009c.12.098.245.195.372.288a.075.075 0 0 1-.006.125c-.598.344-1.22.635-1.873.877a.075.075 0 0 0-.041.105c.36.687.772 1.341 1.225 1.962a.077.077 0 0 0 .084.028 19.963 19.963 0 0 0 6.002-2.981.076.076 0 0 0 .032-.054c.5-5.094-.838-9.52-3.549-13.442a.06.06 0 0 0-.031-.028zM8.02 15.278c-1.182 0-2.157-1.069-2.157-2.38 0-1.312.956-2.38 2.157-2.38 1.21 0 2.176 1.077 2.157 2.38 0 1.312-.956 2.38-2.157 2.38zm7.975 0c-1.183 0-2.157-1.069-2.157-2.38 0-1.312.955-2.38 2.157-2.38 1.21 0 2.176 1.077 2.157 2.38 0 1.312-.946 2.38-2.157 2.38z"/>
+                    </svg>
+                    <span class="social-name">Discord: neomc11</span>
+                </a>
+                <a href="https://youtube.com/@NEOMC12" target="_blank" class="social-link">
+                    <svg class="social-icon" viewBox="0 0 24 24" fill="#FF0000">
+                        <path d="M23.498 6.186a3.016 3.016 0 0 0-2.122-2.136C19.505 3.545 12 3.545 12 3.545s-7.505 0-9.377.505A3.017 3.017 0 0 0 .502 6.186C0 8.07 0 12 0 12s0 3.93.502 5.814a3.016 3.016 0 0 0 2.122 2.136c1.871.505 9.376.505 9.376.505s7.505 0 9.377-.505a3.015 3.015 0 0 0 2.122-2.136C24 15.93 24 12 24 12s0-3.93-.502-5.814zM9.545 15.568V8.432L15.818 12l-6.273 3.568z"/>
+                    </svg>
+                    <span class="social-name">YouTube @NEOMC12</span>
+                </a>
+            </div>
+        </section>
+
+        <!-- Projects Section - Tus 5 proyectos reales -->
+        <section class="projects-section">
+            <h2 class="projects-title">Mis Proyectos Destacados</h2>
+            <div class="projects-grid">
+                <div class="project-card">
+                    <img src="https://miro.medium.com/v2/resize:fit:1138/1*70jvFtgIcbDncjt0Lh98eQ.png" alt="GameStore" class="project-image">
+                    <div class="project-content">
+                        <h3 class="project-name">GameStore</h3>
+                        <p class="project-desc">Tienda moderna estilo Play Store para descargar juegos y apps, con diseño oscuro premium y últimas descargas destacadas.</p>
+                        <a href="https://game-store-self.vercel.app/" target="_blank" class="project-link">Visitar sitio</a>
+                    </div>
+                </div>
+
+                <div class="project-card">
+                    <img src="https://d3h2k7ug3o5pb3.cloudfront.net/image/2020-12-03/afb300f0-354d-11eb-be48-092568f6a231.jpg" alt="Learning Kodes" class="project-image">
+                    <div class="project-content">
+                        <h3 class="project-name">Learning Kodes</h3>
+                        <p class="project-desc">Plataforma educativa interactiva para aprender HTML y CSS de forma divertida con juegos y actividades (colaboración).</p>
+                        <a href="https://learningkodes.github.io/lks/" target="_blank" class="project-link">Visitar sitio</a>
+                    </div>
+                </div>
+
+                <div class="project-card">
+                    <img src="https://cdn.mcreator.net/image/wiki/minecraft-resource-pack-overrides.gif" alt="Generador de Packs" class="project-image">
+                    <div class="project-content">
+                        <h3 class="project-name">Minecraft Pack Generator</h3>
+                        <p class="project-desc">Herramienta avanzada para generar packs de Minecraft con encriptación segura y diseño ultra moderno (en desarrollo).</p>
+                        <a href="https://minecraft-pack-generator.vercel.app/" target="_blank" class="project-link">Visitar sitio</a>
+                    </div>
+                </div>
+
+                <div class="project-card">
+                    <img src="https://y4pdgnepgswqffpt.public.blob.vercel-storage.com/templates/51634/ailex-7CpIndtivwCXLzqvym4QvK00QrVyOE" alt="GameStore Firebase Edition" class="project-image">
+                    <div class="project-content">
+                        <h3 class="project-name">GameStore - Firebase Edition</h3>
+                        <p class="project-desc">Tienda de juegos con Firebase: apps, texturas, shaders, addons y mundos. Incluye login y modo claro.</p>
+                        <a href="https://hola-topaz.vercel.app/" target="_blank" class="project-link">Visitar sitio</a>
+                    </div>
+                </div>
+
+                <div class="project-card">
+                    <img src="https://cdn.hashnode.com/res/hashnode/image/upload/v1631452885120/SWlSpHgry.png" alt="GameStore Pablo PI" class="project-image">
+                    <div class="project-content">
+                        <h3 class="project-name">GameStore - Versión Pablo PI</h3>
+                        <p class="project-desc">Plataforma intuitiva para APKs de Minecraft, texturas y shaders con colecciones exclusivas como Craftsman y NeoCraft.</p>
+                        <a href="https://pablo-pi.vercel.app/" target="_blank" class="project-link">Visitar sitio</a>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+    </div>
+
+    <!-- Footer -->
+    <footer>
+        <p>© 2025 NEOMC11 - Todos los derechos reservados en todo el universo 🌌</p>
+        <p>Hecho con código, café y mucha creatividad.</p>
+    </footer>
+
+    <!-- Script para Leer en Voz Alta -->
+    <script>
+        const button = document.getElementById('readButton');
+        let utterance = null;
+
+        button.addEventListener('click', () => {
+            if (speechSynthesis.speaking) {
+                speechSynthesis.cancel();
+                button.textContent = '¡Leer toda la página en voz alta!';
+                button.style.background = 'linear-gradient(135deg, var(--primary-blue), var(--primary-yellow))';
+                return;
+            }
+
+            // Recopilar todo el texto visible de la página
+            const textToRead = document.querySelector('.main-content').innerText;
+
+            utterance = new SpeechSynthesisUtterance(textToRead);
+            utterance.lang = 'es-ES';
+            utterance.rate = 0.9;
+            utterance.pitch = 1;
+
+            utterance.onend = () => {
+                button.textContent = '¡Leer toda la página en voz alta!';
+                button.style.background = 'linear-gradient(135deg, var(--primary-blue), var(--primary-yellow))';
+            };
+
+            speechSynthesis.speak(utterance);
+
+            button.innerHTML = `
+                <svg width="32" height="32" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                    <rect x="9" y="9" width="6" height="6"></rect>
+                    <path d="M9 3v6m6-6v6"></path>
+                </svg>
+                Detener lectura
+            `;
+            button.style.background = '#f44336';
+        });
+    </script>
+
+</body>
+</html>

@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title id="pageTitle">Craftsman ONE</title>
+    <link rel="stylesheet" href="./css/view-playstore.css">
+</head>
+<body>
+    <!-- Header -->
+    <header class="detail-header">
+        <button class="back-button" onclick="history.back()">
+            <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                <path d="m15 18-6-6 6-6"/>
+            </svg>
+        </button>
+        <h1 class="header-title">Volver al inicio</h1>
+    </header>
+
+    <!-- Contenedor Principal -->
+    <div class="detail-container">
+        <!-- Header de la App -->
+        <div class="app-header-section" id="appHeaderSection"></div>
+
+        <!-- Screenshots -->
+        <section class="screenshots-section">
+            <h2 class="section-title-view">Capturas de pantalla</h2>
+            <div class="screenshots-slider-wrapper">
+                <button class="slider-nav-btn left" id="screenshotsLeft">
+                    <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                        <path d="m15 18-6-6 6-6"/>
+                    </svg>
+                </button>
+                <div class="screenshots-slider" id="screenshotsSlider"></div>
+                <button class="slider-nav-btn right" id="screenshotsRight">
+                    <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                        <path d="m9 18 6-6-6-6"/>
+                    </svg>
+                </button>
+            </div>
+        </section>
+
+        <!-- Acerca de -->
+        <section class="about-section">
+            <h2 class="section-title-view">Acerca de esta aplicación</h2>
+            <p class="app-description-text" id="appDescription"></p>
+        </section>
+
+        <!-- Información Adicional -->
+        <section class="info-section" id="infoSection"></section>
+
+        <!-- Reseñas -->
+        <section class="reviews-section">
+            <div class="reviews-header">
+                <h2 class="section-title-view">Reseñas</h2>
+                <div class="overall-rating" id="overallRating"></div>
+            </div>
+            <div id="reviewsContent"></div>
+        </section>
+    </div>
+
+    <script src="./js/data.js"></script>
+    <script src="./js/view.js"></script>
+</body>
+</html>
